@@ -5,7 +5,7 @@ ENV ROS_UNDERLAY /root/ws_ros2_control/install
 WORKDIR $ROS_UNDERLAY/../src
 
 RUN apt-get update && apt-get install wget && \
-        wget https://raw.githubusercontent.com/ros-controls/ros2_control/master/ros2_control/ros2_control.repos && \
+        wget https://raw.githubusercontent.com/ros-controls/ros2_control/${ROS_DISTRO}/ros2_control/ros2_control.repos && \
         vcs import < ros2_control.repos
 
 RUN rosdep update && \
