@@ -83,6 +83,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           file: .docker/source/Dockerfile
-          build-args:
-            ROS_DISTRO: ${{ env.ROS_DISTRO }}
-            BRANCH: ${{ env.BRANCH }}
+          build-args: ROS_DISTRO=${{ env.ROS_DISTRO }},BRANCH=${{ env.BRANCH }}
