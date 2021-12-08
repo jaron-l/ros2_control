@@ -8,7 +8,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   ROS_DISTRO: galactic
-  BRANCH: ${{ github.ref }}
+  BRANCH: master
 
 jobs:
   build-and-push-release:
