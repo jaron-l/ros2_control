@@ -47,8 +47,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           file: .docker/release/Dockerfile
           build-args:
-            ROS_DISTRO: ${{ env.ROS_DISTRO }}
-            BRANCH: ${{ env.BRANCH }}
+            - ROS_DISTRO: ${{ env.ROS_DISTRO }}
+            - BRANCH: ${{ env.BRANCH }}
 
   build-and-push-source:
     runs-on: ubuntu-latest
